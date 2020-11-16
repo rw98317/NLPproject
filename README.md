@@ -5,6 +5,30 @@
 Python 3.6 + PyTorch 0.4 
 
 # 数据集
-i. 该论文主要使用的数据集是MSCOCO dataset，使用其中的train2014.zip，val2014.zip(其中的是jpg图片)和annotations_trainval2014.zip
- ii. 标签文件标记了每个segmentation+bounding box（即分割物+分割物的边界）的精确坐标，其精度均为小数点后两位。例如，一个目标分割物的标签示意如下：
- {"segmentation":[[392.87, 275.77, 402.24, 284.2, 382.54, 342.36, 375.99, 356.43, 372.23, 357.37, 372.23, 397.7, 383.48, 419.27,407.87, 439.91, 427.57, 389.25, 447.26, 346.11, 447.26, 328.29, 468.84, 290.77,472.59, 266.38], [429.44,465.23, 453.83, 473.67, 636.73, 474.61, 636.73, 392.07, 571.07, 364.88, 546.69,363.0]], "area": 28458.996150000003, "iscrowd": 0,"image_id": 503837, "bbox": [372.23, 266.38, 264.5,208.23], "category_id": 4, "id": 151109},
+## 输入(准备数据阶段)：
+图像文件：train2014/，val2014/。</br>
+注解文件：instance_train2014.json,instance_val2014.json.(80种物体类别，20种语义类别)
+采用实例标注形式：
+annotation{
+    "id" : int,
+    "image_id" : int,
+    "category_id" : int,
+    "segmentation" : RLE or [polygon],
+    "area" : float, 
+    "bbox" : [x,y,width,height],
+    "iscrowd" : 0 or 1,
+}
+
+categories[{
+    "id" : int,
+    "name" : str,
+    "supercategory" : str,
+}]
+重划分文件：dataset_coco.json(将coco中的train和val合并并重新划分成train/val/test)
+
+## 输出：
+captions.json (训练标注)
+caplens.json  (训练字幕长度)
+name.json     (coco image names whit IDs)
+images.hdf5
+wordmap.json
