@@ -1,14 +1,10 @@
 # NLPproject
-语言信息处理大作业数据集相关
+## 论文:BMVC2019 Look and Modify: Modification Networks for Image Captioning
+
 # 环境
 Python 3.6 + PyTorch 0.4 
+
 # 数据集
-[COCO 2014 dataset](http://cocodataset.org/#download) 。需要下载其中的train2014.zip、val2014.zip。<br/>
-然后下载Karpathy对COCO 2014数据集的train/val/test的[重分割](http://cs.stanford.edu/people/karpathy/deepimagesent/caption_datasets.zip) <br/>
-
-如果想在coco上评估，需要下载[COCOAPI](https://github.com/cocodataset/cocoapi)【注：使用其中的PythonAPI，并且确保安装了Cpython】<br/>
-[COCO caption toolkit](https://github.com/tylin/coco-caption)并将其重命名为`cococaptioncider`。【注：不要忘了下java】<br/>
-
-还需要使用到[bottom up features](https://imagecaption.blob.core.windows.net/imagecaption/trainval_36.zip)。使用[这里](https://github.com/hengyuan-hu/bottom-up-attention-vqa)的方法进行处理。提取到的train36.hdf5和val36.hdf5放在文件夹`bottom-up features`下。<br/>
-
-处理好的[字幕文件](https://drive.google.com/open?id=1vuE0Tj1a1wH-Yh2G_i6Mh1lHiIMM9b7V),其中文件均用作训练使用。<br/>
+i. 该论文主要使用的数据集是MSCOCO dataset，使用其中的train2014.zip，val2014.zip(其中的是jpg图片)和annotations_trainval2014.zip
+ ii. 标签文件标记了每个segmentation+bounding box（即分割物+分割物的边界）的精确坐标，其精度均为小数点后两位。例如，一个目标分割物的标签示意如下：
+ {"segmentation":[[392.87, 275.77, 402.24, 284.2, 382.54, 342.36, 375.99, 356.43, 372.23, 357.37, 372.23, 397.7, 383.48, 419.27,407.87, 439.91, 427.57, 389.25, 447.26, 346.11, 447.26, 328.29, 468.84, 290.77,472.59, 266.38], [429.44,465.23, 453.83, 473.67, 636.73, 474.61, 636.73, 392.07, 571.07, 364.88, 546.69,363.0]], "area": 28458.996150000003, "iscrowd": 0,"image_id": 503837, "bbox": [372.23, 266.38, 264.5,208.23], "category_id": 4, "id": 151109},
