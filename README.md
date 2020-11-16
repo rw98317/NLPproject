@@ -9,7 +9,7 @@ Python 3.6 + PyTorch 0.4
 图像文件：train2014/，val2014/。</br>
 注解文件：instance_train2014.json,instance_val2014.json.(80种物体类别，20种语义类别)
 采用实例标注形式：
-annotation{
+```annotation{
     "id" : int,
     "image_id" : int,
     "category_id" : int,
@@ -24,6 +24,7 @@ categories[{
     "name" : str,
     "supercategory" : str,
 }]
+```
 重划分文件：dataset_coco.json(将coco中的train和val合并并重新划分成train/val/test)
 
 ## 输出：
