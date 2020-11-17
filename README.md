@@ -7,10 +7,13 @@ Python 3.6 + PyTorch 0.4
 # 数据集
 # 使用bottom-to-up features
 ## 输入(准备数据阶段)：
-图像文件：train2014/，val2014/</br>
-注解文件：instance_train2014.json,instance_val2014.json.(80种物体类别，20种语义类别)</br>
+MS COCO2014 dataset 
+图片文件：train2014/，val2014/. 放置在`data preperation/images`下 </br>
+注解文件：instance_train2014.json,instance_val2014.json.放置在`data preperation/caption data`下</br>
 采用实例标注形式：</br>
-```annotation{
+```
+#其中还包含80种物体类别，20种语义类别(未列出)
+annotation{
     "id" : int,
     "image_id" : int,
     "category_id" : int,
@@ -26,16 +29,18 @@ categories[{
     "supercategory" : str,
 }]
 ```
-重划分文件：dataset_coco.json(将coco中的train和val合并并重新划分成train/val/test)</br>
-字幕文件：
-<train>captions.json </br>
-<train>caplens.json </br>
-caputil.json </br>
-genome_dets.json </br>
-image_names.json </br>
-wordmap.json </br>
-
-
+重划分文件：dataset_coco.json(将coco中的train和val合并并重新划分成train/val/test),放置在`data preperation/caption data`下</br>
 
 ## 输出：</br>
+使用prepare_captions..py处理以上文件，得到：
+(VAL,TEST)TRAIN_name_coco.json  (存储图像名,例如：`COCO_train2014_000000205672.jpg`)
+(VAL,TEST)TRAIN_IMAGE_coco.hdf5 (存储图像数据)
+(VAL,TEST)TRAIN_CAPTIONS_coco.json (存储encoded captions,例如：`[9488,6,50,....,0]`)
+(VAL,TEST)TRAIN_CAPLENS_coco.json (存储encoded caption length,例如:`[9488,5,50,....0]`中不为0的个数是13个，则文件中对应位置就是13)
+WORDMAP_coco.json (单词字典,存储每个单词的索引，例如：`"i": 1, "n": 2, "f": 3,...."swaddled": 9485, "dentist": 9486, "`)
+
+
+
+
+
 
