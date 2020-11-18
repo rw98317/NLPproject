@@ -49,6 +49,15 @@ categories[{
 ## 输出：</br>
 还没得到...，因为代码中有点错误，而且没改好，跑出结果的话应该就能知道数据了。</br>
 
+### 以上文件的具体说明：
+![coco中的一张图片]https://github.com/yuani114/NLPproject/blob/main/COCO_val2014_000000522418.jpg </br>
+在`TRAIN_name_coco.json`中它是`"COCO_val2014_000000522418.jpg"` </br>
+在`TRAIN_CAPTIONS_coco.json`它是`[9488, 916, 43, 389, 916, 50, 3, 931, 273, 9489, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]` </br>
+在`TRAIN_CAPLENS_coco.json`对应到的长度就是`10`</br>
+对应到`WORDMAP_coco.json`中构建出来句子就是`["<start>": 9488,"a": 916,"woman": 43,"cutting": 389,"a": 916,"large": 50,"sheet": 931,"cake": 273,"<end>": 9489]`连起来就是 a woman cutting a large sheet cake </br>
+在`dataset_coco.json`也存在该句子：`{..."tokens": ["a", "woman", "cutting", "a", "large", "white", "sheet", "cake"], "raw": "A woman cutting a large white sheet cake."...}`</br>
+在`TRAIN_CAPUTIL_coco.json`对应的需要修改的句子就是：`{..."caption": "a woman in a beanie is looking at a white bed"...}`</br>
+【注：coco数据集中，一个图片对应了5个字幕，就是说`TRAIN_name_coco.json`中的一个name会对应`TRAIN_CAPTIONS_coco.json`中5个`[.....]`】</br>
 # 小总结
 需要修改的字幕：`TRAIN_CAPUTIL_coco.json` </br>
 标准的字幕：原始存在`dataset_coco.json`,经过处理转变成encoded形式，存在`TRAIN_CAPTION_coco.json`中 </br>
