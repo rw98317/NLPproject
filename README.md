@@ -50,7 +50,7 @@ categories[{
 还没得到...，因为代码中有点错误，而且没改好，跑出结果的话应该就能知道数据了。</br>
 
 ### 以上文件的具体说明：
-![coco中的一张图片]https://github.com/yuani114/NLPproject/blob/main/COCO_val2014_000000522418.jpg </br>
+![Alt text]https://github.com/yuani114/NLPproject/blob/main/COCO_val2014_000000522418.jpg </br>
 在`TRAIN_name_coco.json`中它是`"COCO_val2014_000000522418.jpg"` </br>
 在`TRAIN_CAPTIONS_coco.json`它是`[9488, 916, 43, 389, 916, 50, 3, 931, 273, 9489, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]` </br>
 在`TRAIN_CAPLENS_coco.json`对应到的长度就是`10`</br>
