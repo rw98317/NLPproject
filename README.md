@@ -46,6 +46,7 @@ categories[{
 `TRAIN_CAPLENS_coco.json` </br>
 `WORDMAP_coco.json` </br>
 `(VAL)TRAIN_CAPUTIL_coco.json` (github中直接给的，其中主要内容是previous caption，即需要修改的字幕) </br>
+给的文件里面还有一个叫`(VAL,TEST)TRAIN_GENOME_DETS.json`的东西，暂时不知道是用来做什么的 </br>
 ## 输出：</br>
 还没得到...，因为代码中有点错误，而且没改好，跑出结果的话应该就能知道数据了。
 
