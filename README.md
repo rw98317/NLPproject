@@ -10,7 +10,7 @@ Python 3.6 + PyTorch 0.4
 MS COCO2014 dataset 
 图片文件：train2014/，val2014/. 放置在`data preperation/images`下 </br>
 注解文件：instance_train2014.json,instance_val2014.json.放置在`data preperation/caption data`下</br>
-采用实例标注形式：</br>
+采用实例标注形式：
 ```
 #其中还包含80种物体类别，20种语义类别(未列出)
 annotation{
