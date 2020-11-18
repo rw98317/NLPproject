@@ -30,7 +30,7 @@ categories[{
 重划分文件：`dataset_coco.json`(正确的字幕，并将coco中的train和val合并并重新划分成train/val/test),放置在`data preperation/caption data`下</br>
 
 ## 输出：</br>
-使用`prepare_captions.py`处理以上文件，得到：
+使用`prepare_captions.py`处理以上文件，得到：</br>
 `TRAIN_name_coco.json`  (存储图像名,例如：`COCO_train2014_000000205672.jpg`，按顺序对应于`TRAIN_CAPTIONS_coco.json`的字幕) </br>
 `TRAIN_IMAGE_coco.hdf5` (存储图像数据) </br>
 `TRAIN_CAPTIONS_coco.json` (存储已编码字幕,例如：`[9488,6,50,..,9489..,0]`，其中'9488代表一句话开始，9489代表一句话结束'，数字索引对应单词可从`WORDMAP_coco.json`找到) </br>
