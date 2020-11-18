@@ -51,9 +51,9 @@ categories[{
 还没得到...，因为代码中有点错误，而且没改好，跑出结果的话应该就能知道数据了。</br>
 
 # 小总结
-需要修改的字幕：`TRAIN_CAPUTIL_coco.json` 
-标准的字幕：原始存在`dataset_coco.json`,经过处理转变成encoded形式存在`TRAIN_CAPTION_coco.json`中
-【注：我拿`TRAIN_CAPUTIL_coco.json`和`dataset_coco.json`中的字幕内容和图片做了下对比，给人感觉都是对的.....】
+需要修改的字幕：`TRAIN_CAPUTIL_coco.json` </br>
+标准的字幕：原始存在`dataset_coco.json`,经过处理转变成encoded形式存在`TRAIN_CAPTION_coco.json`中 </br>
+【注：我拿`TRAIN_CAPUTIL_coco.json`和`dataset_coco.json`中的字幕内容和图片做了下对比，给人感觉都是对的.....】 </br>
 
 
 
