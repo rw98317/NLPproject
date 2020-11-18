@@ -37,7 +37,7 @@ categories[{
 `(VAL,TEST)TRAIN_CAPTIONS_coco.json` (存储encoded captions,例如：`[9488,6,50,....,0]`) </br>
 `(VAL,TEST)TRAIN_CAPLENS_coco.json` (存储encoded caption length,例如:`[9488,5,50,....0]`中不为0的个数是13个，则文件中对应位置就是13) </br>
 `WORDMAP_coco.json` (单词字典,存储每个单词的索引，例如：`"i": 1, "n": 2, "f": 3,...."swaddled": 9485, "dentist": 9486, "`) </br>
-作为后续的train_eval.py的输入。</br>
+作为后续的`train_eval.py`的输入。</br>
 
 ## 输入(训练数据)：</br>
 `(VAL)TRAIN_name_coco.json` </br>
