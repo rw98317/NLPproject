@@ -9,8 +9,7 @@ Python 3.6 + PyTorch 0.4
 ## 输入(准备数据)：
 MS COCO2014 dataset 
 图片文件：train2014/，val2014/. 放置在`data preperation/images`下 </br>
-注解文件：instance_train2014.json,instance_val2014.json.放置在`data preperation/caption data`下</br>
-采用实例标注形式：
+注解文件：instance_train2014.json,instance_val2014.json(正确的字幕).放置在`data preperation/caption data`下，内容：</br>
 ```
 #其中还包含80种物体类别，20种语义类别(未列出)
 annotation{
@@ -41,11 +40,12 @@ WORDMAP_coco.json (单词字典,存储每个单词的索引，例如：`"i": 1, 
 作为后续的train_eval.py的输入。</br>
 
 ## 输入(训练数据)：</br>
-TRAIN_name_coco.json </br>
-TRAIN_IMAGE_coco.hdf5 </br>
+(VAL)TRAIN_name_coco.json </br>
+(VAL)TRAIN_IMAGE_coco.hdf5 </br>
 TRAIN_CAPTIONS_coco.json </br>
 TRAIN_CAPLENS_coco.json </br>
-TRAIN_CAPUTIL_coco.json (github中直接给的，其中主要内容是previous caption，即需要修改的字幕) </br>
+WORDMAP_coco.json
+(VAL)TRAIN_CAPUTIL_coco.json (github中直接给的，其中主要内容是previous caption，即需要修改的字幕) </br>
 ## 输出：</br>
 还没得到...，因为代码中有点错误，而且没改好，跑出结果的话应该就能知道数据了。
 
