@@ -54,7 +54,8 @@ categories[{
 标准的字幕：原始存在`dataset_coco.json`,经过处理转变成encoded形式，存在`TRAIN_CAPTION_coco.json`中 </br>
 【注：我拿`TRAIN_CAPUTIL_coco.json`和`dataset_coco.json`中的字幕内容和图片做了下对比，其中有些句子(previous caption)对比标准句子是有明显错误的，但是有些看起来说的没错，但是事实上可以补充更多细节(这也是edit的一种)。】 </br>
 
-代码和提到的一些json文件:https://pan.baidu.com/s/1tGCEpVE7Ehu3jLmOYHFflAl;提取码：lrzd
+代码和提到的一些json文件:https://pan.baidu.com/s/1tGCEpVE7Ehu3jLmOYHFflAl
+提取码：lrzd
 
 
 
