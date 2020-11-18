@@ -48,10 +48,12 @@ categories[{
 `(VAL)TRAIN_CAPUTIL_coco.json` (github中直接给的，其中主要内容是previous caption，即需要修改的字幕) </br>
 给的文件里面还有一个叫`(VAL,TEST)TRAIN_GENOME_DETS.json`的东西，暂时不知道是用来做什么的 </br>
 ## 输出：</br>
-还没得到...，因为代码中有点错误，而且没改好，跑出结果的话应该就能知道数据了。
+还没得到...，因为代码中有点错误，而且没改好，跑出结果的话应该就能知道数据了。</br>
 
-
-
+# 小总结
+需要修改的字幕：`TRAIN_CAPUTIL_coco.json` 
+标准的字幕：原始存在`dataset_coco.json`,经过处理转变成encoded形式存在`TRAIN_CAPTION_coco.json`中
+【注：我拿`TRAIN_CAPUTIL_coco.json`和`dataset_coco.json`中的字幕内容和图片做了下对比，给人感觉都是对的.....】
 
 
 
