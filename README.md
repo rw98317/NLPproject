@@ -28,10 +28,10 @@ categories[{
     "supercategory" : str,
 }]
 ```
-重划分文件：dataset_coco.json(将coco中的train和val合并并重新划分成train/val/test),放置在`data preperation/caption data`下</br>
+重划分文件：`dataset_coco.json`(将coco中的train和val合并并重新划分成train/val/test),放置在`data preperation/caption data`下</br>
 
 ## 输出：</br>
-使用prepare_captions.py处理以上文件，得到：
+使用`prepare_captions.py`处理以上文件，得到：
 `(VAL,TEST)TRAIN_name_coco.json`  (存储图像名,例如：`COCO_train2014_000000205672.jpg`) </br>
 `(VAL,TEST)TRAIN_IMAGE_coco.hdf5` (存储图像数据) </br>
 `(VAL,TEST)TRAIN_CAPTIONS_coco.json` (存储encoded captions,例如：`[9488,6,50,....,0]`) </br>
@@ -44,7 +44,7 @@ categories[{
 `(VAL)TRAIN_IMAGE_coco.hdf5` </br>
 `TRAIN_CAPTIONS_coco.json` </br>
 `TRAIN_CAPLENS_coco.json` </br>
-`WORDMAP_coco.json`
+`WORDMAP_coco.json` </br>
 `(VAL)TRAIN_CAPUTIL_coco.json` (github中直接给的，其中主要内容是previous caption，即需要修改的字幕) </br>
 ## 输出：</br>
 还没得到...，因为代码中有点错误，而且没改好，跑出结果的话应该就能知道数据了。
